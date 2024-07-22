@@ -1,14 +1,12 @@
-import React from 'react';
-import { AppProps } from 'next/app';
-import { MantineProvider } from '@mantine/core';
-import '@/styles/globals.css';
+import '@mantine/core/styles.css';
+import "@/styles/globals.css";
+import type { AppProps } from "next/app";
+import {MantineProvider } from '@mantine/core';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-      <MantineProvider>
-        <Component {...pageProps} />
-      </MantineProvider>
-  );
+export default function App({ Component, pageProps }: AppProps) {
+    return (
+        <MantineProvider>
+            <Component {...pageProps} />
+        </MantineProvider>
+    );
 }
-
-export default MyApp;

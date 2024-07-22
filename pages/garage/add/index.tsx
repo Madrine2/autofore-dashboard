@@ -1,8 +1,8 @@
-import React from 'react';
-import { AppShell } from '@mantine/core';
-import Sidebar from '@/components/sidebar/sidebar';
-
-const Add = () => {
+import React from "react";
+import Sidebar from "@/components/sidebar/Sidebar";
+import {AppShell} from '@mantine/core';
+import Navbar from "@/components/navbar/navbar";
+const Orders = () => {
     return (
         <AppShell
             header={{ height: 60 }}
@@ -18,12 +18,17 @@ const Add = () => {
                 },
             }}
         >
+            <AppShell.Header>
+                <Navbar/>
+            </AppShell.Header>
             <AppShell.Navbar>
-                <Sidebar />
+                <Sidebar/>
             </AppShell.Navbar>
-            {/* Add your main content here */}
+            {/*<AppShell.Main>*/}
+            {/*    <FoodForm />*/}
+            {/*</AppShell.Main>*/}
         </AppShell>
     );
 };
 
-export default Add;
+export default Orders;
